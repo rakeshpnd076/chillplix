@@ -1,0 +1,141 @@
+$bg-color: rgb(30, 30, 30);
+
+.banner {
+    height: 600px;
+    background: $bg-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: $bg-color;
+        opacity: 0.3;
+    }
+
+    >h1,
+    p {
+        color: #fff;
+        font-size: 4rem;
+        width: 35%;
+        z-index: 10;
+        margin-left: 15px;
+    }
+
+    >p {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        font-weight: 100;
+    }
+
+    >div{
+        display: flex;
+        >button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            width: 200px;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            z-index: 10;
+            margin: 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover{
+                opacity: 0.7;
+            }
+            
+            &:nth-child(even){
+            background: #3d3d3d;
+            color: white;
+            }
+            
+            &:nth-child(odd){
+            background: #fff;
+            color: black;
+            }
+            >svg{
+                font-size: 1.7rem;
+                margin: 0 10px;
+            }
+        }
+    }
+   
+}
+
+
+
+.row {
+    padding: 1rem;
+    background: $bg-color;
+
+    >h2 {
+        font-weight: 400;
+        margin: 0.3rem;
+    }
+
+    >div {
+        display: flex;
+        overflow-x: auto;
+    }
+
+}
+
+
+
+.card {
+    width: 200px;
+    margin: 0.3rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 0 10px;
+
+    &:hover {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+.cardP {
+    color: #fff;
+
+    >p {
+        margin-left: 22px;
+    }
+}
+
+.genreBox {
+    overflow-x: auto;
+    display: flex;
+    height: 100px;
+    background: $bg-color;
+
+    >a {
+        color: black;
+        background: white;
+        padding: 1rem 0;
+        border-radius: 5px;
+        margin: 1rem;
+        transition: all 0.3s;
+        min-width: 10rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background: rgb(236, 236, 236);
+        }
+    }
+}
